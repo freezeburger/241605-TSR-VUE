@@ -1,7 +1,7 @@
 
-import { User } from "../interfaces/user";
+import { Message } from "../interfaces/message";
 import { AbstractCrudService } from "./abstract-crud";
 
-export class MessageService extends AbstractCrudService<User>{
+export class MessageService extends AbstractCrudService<Message>{
     
 }

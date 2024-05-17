@@ -5,10 +5,19 @@ const headers = {
     'Content-Type': 'application/json'
 } as const
 
-interface Config{
+/* interface Config{
     method: 'GET' | 'DELETE' | 'POST' | 'PUT'
     headers: typeof headers
     body?:string;
+} */
+
+type Config = {
+    method: 'GET' | 'DELETE' 
+    headers: typeof headers
+} | {
+    method:  'POST' | 'PUT'
+    headers: typeof headers;
+    body:string;
 }
 
 /* type Config ={
